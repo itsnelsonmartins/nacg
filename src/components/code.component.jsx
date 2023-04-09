@@ -9,8 +9,8 @@ const Code = ({ value }) => {
 
     return (
         // Based on themeValue, dark or light, it will show the respective css using a ternary condition
-        <pre className='content'>
-            <p className='theme'>{themeValue}</p>
+        <pre className='wrapper'>
+            <span className='tag is-dark is-pulled-right'>{themeValue}</span>
             {`
 html {
     --brand-hue: ${value.h};

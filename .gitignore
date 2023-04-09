@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 TODO.md
-*bulma*
 
 # Editor directories and files
 .vscode/*

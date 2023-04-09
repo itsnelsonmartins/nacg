@@ -40,11 +40,15 @@ function App() {
     return (
         <div className='App'>
             <Nav />
-            <div className='wrapper'>
-                <Display />
-                {hslValue && <Code value={hslValue} />}
+            <div className='columns' style={{ margin: '1rem' }}>
+                <div className='column is-5'>
+                    <Display />
+                </div>
+                <div className='column is-7'>
+                    {hslValue && <Code value={hslValue} />}
+                </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

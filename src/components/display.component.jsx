@@ -1,31 +1,53 @@
-// Simple Display of elements with the colors
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Display = () => {
     return (
-        <div className='content'>
-            <section>
-                <div className='surface-samples'>
-                    <div className='surface1'></div>
-                    <div className='surface2'></div>
-                    <div className='surface3'></div>
-                    <div className='surface4'></div>
+        <div className='wrapper'>
+            <div className='tile is-ancestor'>
+                <div className='tile is-parent'>
+                    <article className='tile is-child box surface1'>
+                        <div>1</div>
+                    </article>
                 </div>
-            </section>
-
-            <section>
-                <div className='text-samples'>
-                    <h1 className='text1'>
-                        <span className='swatch brand'></span>
-                        Brand Color
-                    </h1>
-                    <h1 className='text1'>
-                        <span className='swatch text1'></span>
-                        Text Color 1
-                    </h1>
-                    <h1 className='text2'>
-                        <span className='swatch text2'></span>
-                        Text Color 2
-                    </h1>
+                <div className='tile is-parent'>
+                    <article className='tile is-child box surface2'>
+                        <div>2</div>
+                    </article>
+                </div>
+            </div>
+            <div className='tile is-ancestor'>
+                <div className='tile is-parent'>
+                    <article className='tile is-child box surface3'>
+                        <div>3</div>
+                    </article>
+                </div>
+                <div className='tile is-parent'>
+                    <article className='tile is-child box surface4'>
+                        <div>4</div>
+                    </article>
+                </div>
+            </div>
+            <div className='content'>
+                <div className='level'>
+                    <div className='level-item has-text-centered'>
+                        <div className='brand'>
+                            <p className='heading'>Brand Color</p>
+                            <FontAwesomeIcon icon={faCircle} className='icon' />
+                        </div>
+                    </div>
+                    <div className='level-item has-text-centered'>
+                        <div className='textColor1'>
+                            <p className='heading '>Text Color 1</p>
+                            <FontAwesomeIcon icon={faCircle} className='icon' />
+                        </div>
+                    </div>
+                    <div className='level-item has-text-centered'>
+                        <div className='textColor2'>
+                            <p className='heading '>Text Color 2</p>
+                            <FontAwesomeIcon icon={faCircle} className='icon' />
+                        </div>
+                    </div>
                 </div>
                 <p className='text1'>
                     I haven't felt much of anything since my guinea pig died.
@@ -45,7 +67,7 @@ const Display = () => {
                         through to you? Noooooo!
                     </b>
                 </p>
-            </section>
+            </div>
         </div>
     );
 };
