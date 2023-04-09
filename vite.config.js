@@ -6,6 +6,7 @@ export default defineConfig({
     plugins: [react()],
     base: '/nacg/',
     build: {
+        minify: true,
         rollupOptions: {
             output: {
                 entryFileNames: `assets/[name].js`,
