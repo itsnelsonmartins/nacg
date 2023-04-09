@@ -42,6 +42,10 @@ const Nav = () => {
         }
     };
 
+    const submitHandler = (event) => {
+        event.preventDefault();
+    };
+
     const inputColor = (event) => {
         //get user Value
         const inputValue = event.target.value;
@@ -72,12 +76,15 @@ const Nav = () => {
                 </div>
             </div>
             <div className='navbar-item'>
-                <form action='' className='inputColorForm'>
+                <form
+                    action=''
+                    className='inputColorForm'
+                    onSubmit={submitHandler}>
                     <input
                         type='text'
                         name='inputColor'
                         onChange={inputColor}
-                        placeholder='223,100,33'
+                        placeholder='180,50,50'
                     />
                 </form>
             </div>
