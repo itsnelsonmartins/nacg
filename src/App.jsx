@@ -4,7 +4,6 @@ import { ContextApi } from './ContextApi';
 import Nav from './components/nav.component';
 import Display from './components/display.component';
 import Code from './components/code.component';
-import Footer from './components/footer.component';
 
 function App() {
     // Get hsl State from ContextApi
@@ -48,7 +47,6 @@ function App() {
                     {hslValue && <Code value={hslValue} />}
                 </div>
             </div>
-            {/* <Footer /> */}
         </div>
     );
 }

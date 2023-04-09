@@ -9,7 +9,7 @@ const Code = ({ value }) => {
 
     return (
         // Based on themeValue, dark or light, it will show the respective css using a ternary condition
-        <pre className='wrapper'>
+        <pre className='wrapper textColor1'>
             <span className='tag is-dark is-pulled-right'>{themeValue}</span>
             {`
 html {
@@ -32,6 +32,7 @@ html {
 }
 
 :root {
+    color-scheme: dark;
     --brand: var(--brand-dark);
     --text1: var(--text1-dark);
     --text2: var(--text2-dark);
@@ -60,6 +61,7 @@ html {
 }
 
 :root {
+    color-scheme: light;
     --brand: var(--brand-light);
     --text1: var(--text1-light);
     --text2: var(--text2-light);

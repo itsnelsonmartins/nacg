@@ -77,7 +77,7 @@ const Nav = () => {
                         type='text'
                         name='inputColor'
                         onChange={inputColor}
-                        placeholder='eg. 223,100,33'
+                        placeholder='223,100,33'
                     />
                 </form>
             </div>

@@ -1,14 +1,9 @@
-html,
-body {
-    height: 100vh;
-}
-
-body {
+html {
     background-color: var(--surface1);
 }
 
-pre {
-    background: 0;
+.app {
+    height: 100vh;
 }
 
 .navbar {
@@ -27,9 +22,9 @@ pre {
 .inputColorForm input {
     background-color: transparent;
     color: var(--surface1);
-    text-align: left;
+    text-align: center;
     font-size: 2rem;
-    width: 70%;
+    width: 65%;
     border: none;
     outline: none;
     border-bottom: 1px solid var(--surface1);
@@ -75,10 +70,8 @@ hr {
 
 .textColor1 {
     color: var(--text1);
-    font-weight: 200;
 }
 
 .textColor2 {
     color: var(--text2);
-    font-weight: 200;
 }
