@@ -14,8 +14,8 @@ const Code = ({ value }) => {
             {`
 html {
     --brand-hue: ${value.h};
-    --brand-saturation: ${value.s};
-    --brand-lightness: ${value.l};`}
+    --brand-saturation: ${value.s}%;
+    --brand-lightness: ${value.l}%;`}
             {themeValue === 'dark' ? (
                 <code>
                     {`
