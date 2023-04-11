@@ -1,7 +1,21 @@
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
+import quotes from '../assets/quotes';
+
 const Display = () => {
+    const getRandomObject = (array) => {
+        const randomObject = array[Math.floor(Math.random() * array.length)];
+        return randomObject;
+    };
+
+    const [randomQuotes, setRandomQuotes] = useState(() => {
+        const quoteOne = getRandomObject(quotes).quote;
+        const quoteTwo = getRandomObject(quotes).quote;
+        return { quoteOne, quoteTwo };
+    });
+
     return (
         <div className='wrapper'>
             <div className='tile is-ancestor'>
@@ -49,21 +63,9 @@ const Display = () => {
                         </div>
                     </div>
                 </div>
-                <p className='textColor1'>
-                    I haven't felt much of anything since my guinea pig died.
-                    Switzerland is small and neutral! We are more like Germany,
-                    ambitious and misunderstood! I am the man with no name, Zapp
-                    Brannigan! Oh, you're a dollar naughtier than most.
-                </p>
+                <p className='textColor1'>{randomQuotes.quoteOne}</p>
                 <hr />
-                <p className='textColor2'>
-                    It's just like the story of the grasshopper and the octopus.
-                    All year long, the grasshopper kept burying acorns for
-                    winter, while the octopus mooched off his girlfriend and
-                    watched TV. But then the winter came, and the grasshopper
-                    died, and the octopus ate all his acorns. Also he got a race
-                    car. Is any of this getting through to you? Noooooo!
-                </p>
+                <p className='textColor2'>{randomQuotes.quoteTwo}</p>
             </div>
         </div>
     );
