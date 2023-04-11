@@ -1,6 +1,6 @@
 # Not Another Colour Generator
 
-Thia is a website that generates a random HSL color. This tool is ideal for designers and developers who need inspiration for their projects or want to experiment with different color combinations.
+This is a website that generates a random HSL color. This tool is ideal for designers and developers who need inspiration for their projects or want to experiment with different color combinations.
 
 -   [Demo](https://itsnelsonmartins.github.io/nacg)
 
