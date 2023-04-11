@@ -84,7 +84,10 @@ const Nav = () => {
                         type='text'
                         name='inputColor'
                         onChange={inputColor}
-                        placeholder='180,50,50'
+                        placeholder={
+                            hslValue &&
+                            `${hslValue.h},${hslValue.s},${hslValue.l}`
+                        }
                     />
                 </form>
             </div>
