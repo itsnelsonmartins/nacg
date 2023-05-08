@@ -1,15 +1,28 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:base", ":disableDependencyDashboard"],
-    "requiredStatusChecks": null,
+    "baseBranches": ["main"],
+    "extends": ["config:base"],
+    "timezone": "Europe/London",
+    "branchPrefix": "renovate_",
+    "dependencyDashboard": true,
+    "dependencyDashboardTitle": "Renovate Dashboard",
     "packageRules": [
         {
+            "description": "Minor updates are automatic",
             "matchUpdateTypes": ["minor", "patch"],
+            "schedule": ["after 7pm"],
+            "automergeSchedule": ["after 8pm"],
             "automerge": true,
-            "automergeType": "branch"
+            "automergeType": "branch",
+            "platformAutomerge": true,
+            "ignoreTests": true
+        },
+        {
+            "description": "Major manually updated",
+            "schedule": ["after 7pm"],
+            "matchUpdateTypes": ["major"],
+            "additionalBranchPrefix": "major",
+            "ignoreTests": true
         }
-    ],
-    "dependencyDashboard": false,
-    "timezone": "Europe/London",
-    "automergeSchedule": ["after 10am"]
+    ]
 }
