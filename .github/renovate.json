@@ -14,7 +14,8 @@
             "schedule": ["after 7pm"],
             "automergeSchedule": ["after 8pm"],
             "automerge": true,
-            "ignoreTests": true
+            "ignoreTests": true,
+            "automergeType": "branch"
         },
         {
             "matchDepTypes": ["devDependencies"],
