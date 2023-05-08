@@ -13,8 +13,6 @@
             "schedule": ["after 7pm"],
             "automergeSchedule": ["after 8pm"],
             "automerge": true,
-            "automergeType": "branch",
-            "platformAutomerge": true,
             "ignoreTests": true
         },
         {
