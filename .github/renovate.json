@@ -6,14 +6,19 @@
     "branchPrefix": "renovate_",
     "dependencyDashboard": true,
     "dependencyDashboardTitle": "Renovate Dashboard",
+    "platformAutomerge": true,
     "packageRules": [
         {
             "description": "Minor updates are automatic",
-            "matchUpdateTypes": ["minor", "patch"],
+            "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
             "schedule": ["after 7pm"],
             "automergeSchedule": ["after 8pm"],
             "automerge": true,
             "ignoreTests": true
+        },
+        {
+            "matchDepTypes": ["devDependencies"],
+            "automerge": true
         },
         {
             "description": "Major manually updated",
